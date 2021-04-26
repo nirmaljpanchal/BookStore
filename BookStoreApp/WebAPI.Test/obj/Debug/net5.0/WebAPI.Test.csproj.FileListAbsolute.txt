@@ -127,3 +127,5 @@ C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\obj\Debug\net
 C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\obj\Debug\net5.0\ref\WebAPI.Test.dll
 C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\obj\Debug\net5.0\WebAPI.Test.pdb
 C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\obj\Debug\net5.0\WebAPI.Test.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\WebAPI.Test\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

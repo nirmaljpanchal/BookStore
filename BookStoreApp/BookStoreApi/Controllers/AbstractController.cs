@@ -1,24 +1,29 @@
-﻿using CoreAbstraction;
+﻿using AutoMapper;
+using BookStoreApi.ViewModel;
+using CoreAbstraction;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 using System.Collections.Generic;
 
 namespace BookStoreApi.Controllers
 {
-    public abstract class AbstractController<TEntity,TService> : ControllerBase
+    public abstract class AbstractController<TEntity,TService,TViewModel> : ControllerBase
         where TEntity: class, IBaseModel
         where TService: IBaseService<TEntity>
+        where TViewModel : BaseViewModel
     {
-        protected TService _service;
-        public AbstractController(TService service)
+        private readonly TService _service;
+        private readonly IMapper _mapper;
+        public AbstractController(TService service, IMapper mapper)
         {
+            _mapper = mapper;
             _service = service;
         }
 
         [HttpGet]
-        public IEnumerable<TEntity> Get()
+        public IEnumerable<TViewModel> Get()
         {
-            return _service.GetAll();
+            return _mapper.Map<List<TViewModel>>(_service.GetAll());
         }
 
         // GET api/<ValuesController>/5
@@ -30,20 +35,21 @@ namespace BookStoreApi.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public IActionResult Post([FromBody] TEntity value)
+        public IActionResult Post([FromBody] TViewModel value)
         {
             if (!ModelState.IsValid)
             {
                 return new JsonResult("Somethign Went wrong") { StatusCode = 500 };
             }
-            UploadFiles(value);
-            _service.Save(value);
+            var entity = _mapper.Map<TEntity>(value);
+            UploadFiles(entity);
+            _service.Save(entity);
             return Ok(value);
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] TEntity value)
+        public IActionResult Put(int id, [FromBody] TViewModel value)
         {
             if (!ModelState.IsValid)
             {
@@ -53,8 +59,10 @@ namespace BookStoreApi.Controllers
                 return BadRequest();
             if (_service.GetById(id) == null)
                 return NotFound();
-            UploadFiles(value);
-            _service.Update(value);
+            var entity = _mapper.Map<TEntity>(value);
+            UploadFiles(entity);
+
+            _service.Update(entity);
             return Ok(value);
         }
 

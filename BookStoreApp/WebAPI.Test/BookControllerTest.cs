@@ -1,3 +1,4 @@
+using AutoMapper;
 using BookStoreApi.Controllers;
 using CoreAbstraction;
 using Model;
@@ -14,13 +15,15 @@ namespace WebAPI.Test
         private BooksController _controller;
         public Mock<IBookService> MockBookService { get; set; }
         private List<Book> _books;
+        private IMapper _mapper;
         public BookControllerTest(BaseControllerTest fixture)
         {
             MockBookService = fixture.MockBookService;
+            _mapper = fixture.Mapper;
             _books = new List<Book>();
             _books.Add(new Book() { Title = "1st" });
             _books.Add(new Book() { Title = "2nd" });
-            _controller = new BooksController(MockBookService.Object);
+            _controller = new BooksController(MockBookService.Object, _mapper);
         }
         [Fact]
         public void GetTest()

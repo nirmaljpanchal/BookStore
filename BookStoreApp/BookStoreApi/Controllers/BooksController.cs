@@ -1,4 +1,6 @@
-﻿using CoreAbstraction;
+﻿using AutoMapper;
+using BookStoreApi.ViewModel;
+using CoreAbstraction;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 using System;
@@ -13,11 +15,11 @@ namespace BookStoreApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BooksController : AbstractController<Book,IBookService>
+    public class BooksController : AbstractController<Book,IBookService,BookViewModel>
     {
         // GET: api/<ValuesController>
-        public BooksController(IBookService service)
-            :base(service)
+        public BooksController(IBookService service,IMapper mapper)
+            :base(service, mapper)
         {
 
         }

@@ -36,6 +36,7 @@ namespace BookStoreApi
             services.AddDbContext<BookStoreContext>(options =>
             options.UseInMemoryDatabase("BookStore"),ServiceLifetime.Singleton
             );
+            services.AddAutoMapper(typeof(Startup));
             services.AddSingleton(typeof(Book));
             services.AddSingleton(typeof(IBookRepository), typeof(BookRepository));
             services.AddSingleton(typeof(IBookService), typeof(BookService));

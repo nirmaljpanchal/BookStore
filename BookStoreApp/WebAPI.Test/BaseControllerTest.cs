@@ -1,4 +1,6 @@
-﻿using CoreAbstraction;
+﻿using AutoMapper;
+using BookStoreApi.MappingProfiles;
+using CoreAbstraction;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -11,10 +13,13 @@ namespace WebAPI.Test
     public class BaseControllerTest : IDisposable
     {
         public Mock<IBookService> MockBookService { get; set; }
-
+        public IMapper Mapper { get; set; }
         public BaseControllerTest()
         {
             MockBookService = new Mock<IBookService>();
+            var mockMapper = new MapperConfiguration(cfg=>
+            cfg.AddProfile(new DomainToResponseProfile()));
+            Mapper = mockMapper.CreateMapper();
         }
 
         public void Dispose()
