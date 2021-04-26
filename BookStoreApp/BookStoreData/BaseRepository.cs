@@ -20,22 +20,22 @@ namespace Data
             _bookStoreContext = dbContex;
             _entities = _bookStoreContext.Set<TEntity>();
         }
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return _entities;
         }
 
-        public TEntity GetById(int id)
+        public virtual TEntity GetById(int id)
         {
             return _entities.SingleOrDefault(x=>x.Id==id);
         }
 
-        public void Save(TEntity record)
+        public virtual void Save(TEntity record)
         {
             _entities.Add(record);
         }
 
-        public void Update(TEntity record)
+        public virtual void Update(TEntity record)
         {
             var local = _bookStoreContext.Set<TEntity>()
                 .Local
@@ -51,14 +51,14 @@ namespace Data
             _bookStoreContext.Entry(record).State = EntityState.Modified;
         }
 
-        public void Delete(int id)
+        public virtual void Delete(int id)
         {
             var entity = _entities.SingleOrDefault(x => x.Id == id);
             if (entity != null)
                 _entities.Remove(entity);
         }
 
-        public int SaveChanges()
+        public virtual int SaveChanges()
         {
             return _bookStoreContext.SaveChanges();
         }

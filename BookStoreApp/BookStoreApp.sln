@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAbstraction", "CoreAbst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{7B1C6BBE-A261-4FB6-B401-70E55B9934C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTest", "WebTest\WebTest.csproj", "{F721D22C-6ED1-41A6-9DA7-32E768D67FC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7B1C6BBE-A261-4FB6-B401-70E55B9934C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B1C6BBE-A261-4FB6-B401-70E55B9934C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B1C6BBE-A261-4FB6-B401-70E55B9934C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F721D22C-6ED1-41A6-9DA7-32E768D67FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F721D22C-6ED1-41A6-9DA7-32E768D67FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F721D22C-6ED1-41A6-9DA7-32E768D67FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F721D22C-6ED1-41A6-9DA7-32E768D67FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

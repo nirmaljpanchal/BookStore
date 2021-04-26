@@ -11,29 +11,29 @@ namespace Core
         where TRepository : IBaseRepository<TEntity>
     {
         TRepository _repository;
-        public BaseService(TRepository repository)
+        public virtual BaseService(TRepository repository)
         {
             _repository = repository;
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return _repository.GetAll();
         }
 
-        public TEntity GetById(int id)
+        public virtual TEntity GetById(int id)
         {
             return _repository.GetById(id);
         }
 
-        public int Save(TEntity record)
+        public virtual int Save(TEntity record)
         {
             record.CreatedBy = 1;
             record.CreatedDate = DateTime.Now;
              _repository.Save(record);
             return _repository.SaveChanges();
         }
-        public int Update(TEntity record)
+        public virtual int Update(TEntity record)
         {
             record.ModifiedBy = 1;
             record.ModifiedDate = DateTime.Now;
@@ -41,7 +41,7 @@ namespace Core
             return _repository.SaveChanges();
         }
 
-        public int Delete(int id)
+        public virtual int Delete(int id)
         {
             _repository.Delete(id);
             return _repository.SaveChanges();
