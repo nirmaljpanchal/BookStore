@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>
         where TEntity : class, IBaseModel
     {
         protected readonly DbSet<TEntity> _entities;

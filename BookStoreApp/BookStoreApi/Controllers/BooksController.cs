@@ -23,13 +23,13 @@ namespace BookStoreApi.Controllers
         }
         protected override void UploadFiles(Book value)
         {
-            if (Request.Form.Files.Count > 0)
-            {
-                var imageFile = Request.Form.Files[0];
-                var memoryStream = new MemoryStream();
-                imageFile.CopyTo(memoryStream);
-                value.Cover = memoryStream.ToArray();
-            }
+            //if (Request.Form.Files.Count > 0)
+            //{
+            //    var imageFile = Request.Form.Files[0];
+            //    var memoryStream = new MemoryStream();
+            //    imageFile.CopyTo(memoryStream);
+            //    value.Cover = memoryStream.ToArray();
+            //}
         }
          
     }

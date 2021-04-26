@@ -11,7 +11,7 @@ namespace Core
         where TRepository : IBaseRepository<TEntity>
     {
         TRepository _repository;
-        public virtual BaseService(TRepository repository)
+        public BaseService(TRepository repository)
         {
             _repository = repository;
         }
