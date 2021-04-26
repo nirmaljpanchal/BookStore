@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Core/1.0.0": {
+        "dependencies": {
+          "CoreAbstraction": "1.0.0",
+          "DataAbstraction": "1.0.0"
+        },
+        "runtime": {
+          "Core.dll": {}
+        }
+      },
+      "CoreAbstraction/1.0.0": {
+        "dependencies": {
+          "DataAbstraction": "1.0.0",
+          "Model": "1.0.0"
+        },
+        "runtime": {
+          "CoreAbstraction.dll": {}
+        }
+      },
+      "DataAbstraction/1.0.0": {
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "runtime": {
+          "DataAbstraction.dll": {}
+        }
+      },
+      "Model/1.0.0": {
+        "runtime": {
+          "Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CoreAbstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAbstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

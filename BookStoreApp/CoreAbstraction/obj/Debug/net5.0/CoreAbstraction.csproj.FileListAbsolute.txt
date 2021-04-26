@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\CoreAbstraction.deps.json
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\CoreAbstraction.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\ref\CoreAbstraction.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\CoreAbstraction.pdb
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\DataAbstraction.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\Model.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\DataAbstraction.pdb
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\bin\Debug\net5.0\Model.pdb
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\ref\CoreAbstraction.dll
+C:\Users\Admin\Documents\GitHub\BookStore\BookStoreApp\CoreAbstraction\obj\Debug\net5.0\CoreAbstraction.pdb
